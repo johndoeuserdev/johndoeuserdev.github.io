@@ -4,27 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Izzeti Nefis</title>
-
     <style>
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #f4f4f4; /* Light background for the image section */
+        background-color: #f4f4f4;
       }
-
-      /* Section with farm background */
+      /* Hero section - removed background image */
       .hero-section {
-        background-image: url('farm.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-color: #e9e9e9; /* Light gray background instead of image */
         padding-bottom: 2rem;
-        min-height: 50vh; /* Ensure the section has enough height */
+        min-height: 30vh; /* Reduced height since no background image */
         display: flex;
         flex-direction: column;
       }
-
       /* Navigation styles */
       nav {
         display: flex;
@@ -32,26 +25,28 @@
         margin-inline: 2rem;
         margin-top: 1rem;
       }
-
-      /* Image gallery styles */
-      .image-gallery {
+      /* Media gallery styles - updated for both images and videos */
+      .media-gallery {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2rem;
       }
-
-      .image-gallery img {
+      .media-gallery img, .media-gallery video {
         width: 100%;
         max-width: 800px; /* Limit max width for larger screens */
         margin-bottom: 1.5rem;
-        border-radius: 8px; /* Optional: adds slight rounding to images */
+        border-radius: 8px; /* Optional: adds slight rounding */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+      }
+      /* Video specific styles */
+      .media-gallery video {
+        cursor: pointer; /* Shows hand cursor when hovering over videos */
       }
     </style>
   </head>
   <body>
-    <!-- Hero section with farm background -->
+    <!-- Hero section - removed farm background -->
     <div class="hero-section">
       <header>
         <nav>
@@ -60,7 +55,6 @@
             style="color: black; text-decoration: underline; font-size: 35px"
             >Home</a
           >
-
           <div>
             <a
               href="about.html"
@@ -84,7 +78,6 @@
           </div>
         </nav>
       </header>
-
       <h1 style="text-align: center; font-size: 40px; color: black; margin-top: 2rem;">
         Izzeti Nefis
       </h1>
@@ -92,14 +85,21 @@
         kalitenin adresi burada
       </p>
     </div>
-
-    <!-- Image gallery section -->
-    <div class="image-gallery">
+    <!-- Media gallery section - renamed from image-gallery and added videos -->
+    <div class="media-gallery">
       <img src="image1.jpeg" alt="Image 1" />
       <img src="image2.jpeg" alt="Image 2" />
-      <!-- <img src="image3.jpeg" alt="Image 3" /> -->
-      <!-- <img src="image4.jpeg" alt="Image 4" />
-      <img src="image5.jpeg" alt="Image 5" /> -->
+      
+      <!-- Added video elements -->
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </body>
 </html>
