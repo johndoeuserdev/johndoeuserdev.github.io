@@ -3,107 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Izzeti Nefis</title>
 
     <style>
-        body {
-        background-image: url('farm.webp');
-        background-size: cover; /* Makes the image cover the entire background */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        background-attachment: fixed; /* Keeps the background fixed when scrolling */
+      body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4; /* Light background for the image section */
       }
 
-
-      .gallery {
+      /* Section with farm background */
+      .hero-section {
+        background-image: url('farm.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-bottom: 2rem;
+        min-height: 50vh; /* Ensure the section has enough height */
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        margin: 2rem auto;
-        max-width: 1200px;
-        padding: 0 1rem;
+        flex-direction: column;
       }
 
-      .gallery img {
+      /* Navigation styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        margin-inline: 2rem;
+        margin-top: 1rem;
+      }
+
+      /* Image gallery styles */
+      .image-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .image-gallery img {
         width: 100%;
-        max-width: 280px;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s;
+        max-width: 800px; /* Limit max width for larger screens */
+        margin-bottom: 1.5rem;
+        border-radius: 8px; /* Optional: adds slight rounding to images */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
       }
-      .gallery img:hover {
-        transform: scale(1.05);
-      }
-
     </style>
   </head>
-  <body style="margin: 0; font-family: Arial, Helvetica, sans-serif">
-    <header>
-      <nav
-        style="
-          display: flex;
-          justify-content: space-between;
-          margin-inline: 2rem;
-          margin-top: 1rem;
-        "
-      >
-        <a
-          href="#index"
-          style="color: black; text-decoration: underline; font-size: 35px"
-          >Home</a
-        >
-
-        <div>
+  <body>
+    <!-- Hero section with farm background -->
+    <div class="hero-section">
+      <header>
+        <nav>
           <a
-            href="about.html"
-            style="
-              color: gray;
-              text-decoration: none;
-              margin-right: 1rem;
-              font-size: 30px;
-            "
-            onmouseover="this.style.textDecoration='underline'"
-            onmouseout="this.style.textDecoration='none'"
-            >About</a
+            href="#index"
+            style="color: black; text-decoration: underline; font-size: 35px"
+            >Home</a
           >
-          <a
-            href="contact.html"
-            style="color: gray; text-decoration: none; font-size: 30px"
-            onmouseover="this.style.textDecoration='underline'"
-            onmouseout="this.style.textDecoration='none'"
-            >Contact</a
-          >
-        </div>
-      </nav>
-    </header>
 
-    <h1 style="text-align: center;font-size: 40px; color: black;margin-top: 2rem;">Izzeti Nefis</h1>
-    <p style="text-align: center;font-size: 20px;margin-top: 0.5rem;">kalitenin adresi burada</p>
+          <div>
+            <a
+              href="about.html"
+              style="
+                color: gray;
+                text-decoration: none;
+                margin-right: 1rem;
+                font-size: 30px;
+              "
+              onmouseover="this.style.textDecoration='underline'"
+              onmouseout="this.style.textDecoration='none'"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              style="color: gray; text-decoration: none; font-size: 30px"
+              onmouseover="this.style.textDecoration='underline'"
+              onmouseout="this.style.textDecoration='none'"
+              >Contact</a
+            >
+          </div>
+        </nav>
+      </header>
 
-
-    <div class = "gallery">
-        <img src="image1.jpeg" alt="Gallery Image 1" />
-        <img src="image2.jpeg" alt="Gallery Image 2" />
-        <!-- <img src="image3.jpeg" alt="Gallery Image 3" /> -->
-        <!-- <img src="image4.jpeg" alt="Gallery Image 4" />
-        <img src="image5.jpeg" alt="Gallery Image 5" /> -->
-
+      <h1 style="text-align: center; font-size: 40px; color: black; margin-top: 2rem;">
+        Izzeti Nefis
+      </h1>
+      <p style="text-align: center; font-size: 20px; margin-top: 0.5rem;">
+        kalitenin adresi burada
+      </p>
     </div>
 
-
-    <!-- 
-    images i have 
-    
-    image1.jpeg
-    image2.jpeg
-    image3.jpeg
-    image4.jpeg
-    image5.jpeg
-    
-    -->
+    <!-- Image gallery section -->
+    <div class="image-gallery">
+      <img src="image1.jpeg" alt="Image 1" />
+      <img src="image2.jpeg" alt="Image 2" />
+      <!-- <img src="image3.jpeg" alt="Image 3" /> -->
+      <!-- <img src="image4.jpeg" alt="Image 4" />
+      <img src="image5.jpeg" alt="Image 5" /> -->
+    </div>
   </body>
 </html>
